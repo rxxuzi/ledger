@@ -1,0 +1,21 @@
+# Whitelist .gitignore: ignore everything at the repo root, then re-include only
+# what we track. Use "/*" (root-level only) — NOT a bare "*", which would also
+# recursively hide files inside src/ from git AND from Tailwind v4's content
+# scanner (empty utilities -> unstyled page).
+/*
+
+# tracked sources
+!/src
+!/public
+
+# tracked config & docs
+!/.gitignore
+!/package.json
+!/package-lock.json
+!/next.config.ts
+!/tsconfig.json
+!/postcss.config.mjs
+!/eslint.config.mjs
+!/README.md
+!/LICENSE
+!/logo.svg

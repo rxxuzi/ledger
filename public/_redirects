@@ -1,0 +1,9 @@
+# Cloudflare Pages SPA fallback: routes like /chart/AAPL and /portfolio are
+# resolved client-side, so serve the exported app shell for them.
+/chart/* /index.html 200
+/portfolio /index.html 200
+/discover /index.html 200
+/activity /index.html 200
+/settings /index.html 200
+/share /index.html 200
+/share/* /index.html 200
